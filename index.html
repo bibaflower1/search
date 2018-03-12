@@ -1,0 +1,70 @@
+<DOCTYPE html>
+<html>
+<head>
+  <title>Search Product</title>
+</head>
+<body>
+    <style>
+        h2{
+            color:red;
+            font-size: 20px;
+            text-align: center;
+        }
+        #input{
+            padding: 20px 20px;
+            float: left;
+
+        }
+        #btn{
+            padding:20px 20px;
+        
+        }
+
+    </style>
+    <div class="container">
+        <div class="search">
+            <h2>Search Products</h2>
+            <input type="search" id="input" placeholde="search here" autofocus>
+            <button id="btn">search</button>
+            <p id="demo"></p>
+        </div>
+    </div>
+    <script>
+var products = [
+{
+  name:"iphone",
+  prive"$1200",
+  valeur:"product is available",
+},
+{
+  name:"asus",
+  price:"$1200",
+  valeur:"product is available",
+},
+{
+  name:"mac",
+  price:"$1200",
+  valeur:"product is not available",
+}  
+];
+var input = document.getElementById("input");
+var btn = getElementById("btn");
+
+btn.addEventListener("click", function(){
+for (var i = 0; i < products.length; i++) {
+    
+    for(var key in products) {
+
+        if(input != "") {
+        document.getElementById("demo").innerHTML = products[i][key];
+    
+        }
+        else{
+          alert("Product not available");
+        }
+    }
+}
+});
+</script>
+</body>
+</html>
