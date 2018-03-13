@@ -33,7 +33,7 @@
 var products = [
 {
   name:"iphone",
-  prive"$1200",
+  price"$1200",
   valeur:"product is available",
 },
 {
@@ -48,21 +48,22 @@ var products = [
 }  
 ];
 var input = document.getElementById("input");
-var btn = getElementById("btn");
+var btn = document.getElementById("btn");
 
 btn.addEventListener("click", function(){
 for (var i = 0; i < products.length; i++) {
     
-    for(var key in products) {
+    //for(var key in products) {
 
-        if(input != "") {
-        document.getElementById("demo").innerHTML = products[i][key];
+        if(input.value === products[i].name) {
+        document.getElementById("demo").innerHTML = products[i].value;
+        break;
     
         }
         else{
-          alert("Product not available");
+          document.getElementById("demo").innerHTML = "Product not available"
         }
-    }
+    //}
 }
 });
 </script>
